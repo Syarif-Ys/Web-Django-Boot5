@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from .manager import UserManager
 
 
-class Users(AbstractBaseUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=254, unique=True)
     name = models.CharField(max_length=255, null=True, blank=True)
     is_staff = models.BooleanField(default=False)
